@@ -1,0 +1,32 @@
+Caps and Numlock color switcher for RGB keyboard
+===
+
+General
+---
+
+This script pairs with the [Tuxedo Keyboard Driver](https://github.com/tuxedocomputers/tuxedo-keyboard). It updates the config files to change the colors of left and right sections of the keyboard when the capslock or  numlock is engaged.
+
+Motivation
+---
+
+Working on an RGB keyboard with no indicator lights for cap-|numlock. After many mistyped passwords and server lockouts, I put this together.
+
+Installation
+---
+
+You need root access to the computer. Copy `capslock.sh`to your `/etc` folder, make sure it's executable: `chmod +x /etc/capslock.sh`. Add the following line to your `sudoers` file:
+
+    %sudo   ALL=(ALL:ALL) NOPASSWD: /etc/capslock.sh
+
+Add the following to your application autostart config:
+
+    sudo /etc/capslock.sh
+
+Lastly, make sure the `echo` statement on line 30 is piping to the correct tuxedo config file (after the `>`), otherwise update the path to your actual config file. 
+
+It should work on reboot.
+
+Usage
+---
+
+Change the default colors for the left, right and center segments of the keyboard on lines 6-8. These are hex codes. Left and right default colors are necessarily repeated on line 17 and line 24. Change the colors for engaged capslock and numlock on lines 20 and 27 respectively.

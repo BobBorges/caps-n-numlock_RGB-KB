@@ -30,3 +30,10 @@ Usage
 ---
 
 Change the default colors for the left, right and center segments of the keyboard on lines 6-8. These are hex codes. Left and right default colors are necessarily repeated on line 17 and line 24. Change the colors for engaged capslock and numlock on lines 20 and 27 respectively.
+
+License
+---
+CC BY-SA 4.0
+
+- Attribute usage
+- If used in new work, new work should be released under similar license 
